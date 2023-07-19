@@ -8,6 +8,7 @@ public class AutomationImmortalvApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AutomationImmortalvApplication.class, args);
+		System.out.println("Hello world");
 	}
 
 }
