@@ -11,5 +11,4 @@ jobs:
 
     steps:
       - name: Log Greeting
-      - run: echo "Hey!"
-
+        run: echo "Hey!"
