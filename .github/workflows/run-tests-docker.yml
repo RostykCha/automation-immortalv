@@ -21,5 +21,9 @@ jobs:
       - name: Run Immortal UI tests Inside Docker  # Runs docker-compose.yml file from current repo
         run: |
           docker-compose up
+      - name: Wait Until Tests Passed  # Runs docker-compose.yml file from current repo
+        run: |
           docker wait tests_container
+      - name: Close Containers  # Runs docker-compose.yml file from current repo
+        run: |
           docker-compose down
