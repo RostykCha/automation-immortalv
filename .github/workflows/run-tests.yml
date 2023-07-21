@@ -1,4 +1,4 @@
-name: Build Java Gradle
+name: Run Immortal UI tests
 
 on:
   push:

@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import static immortlv.automationimmortalv.utils.Constants.IMMORTAL_URL_STAGE;
+import static immortlv.automationimmortalv.utils.LoggerWrapper.info;
 
 @SpringBootApplication
 public class AutomationImmortalvApplication {
@@ -14,6 +15,8 @@ public class AutomationImmortalvApplication {
         WebDriverWrapper driverWrapper = new WebDriverWrapper();
         driverWrapper.openUrl(IMMORTAL_URL_STAGE);
         driverWrapper.closeAllBrowsers();
+
+        info("SUCCESS!");
     }
 
 }
