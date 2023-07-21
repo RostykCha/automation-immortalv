@@ -16,6 +16,8 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
-      - name: Run Docker commands
+      - name: Run Immortal UI tests Inside Docker
         run: |
           docker-compose up
+          docker wait tests_container
+          docker-compose down
