@@ -1,4 +1,4 @@
-name: Run Immortal UI tests
+name: Run Immortal UI tests Docker
 
 on:
   push:
@@ -13,10 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Docker
-        uses: docker/setup-docker@v1
-
-      # Your Docker commands go here
-      - name: Start Testing Services
+      - name: Run Docker commands
         run: |
-          docker compose-up
+          chmod +x docker-action.sh
+          ./docker-action.sh

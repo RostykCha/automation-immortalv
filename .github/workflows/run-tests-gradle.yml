@@ -1,9 +1,9 @@
-name: Run Immortal UI tests
+name: Run Immortal UI tests Gradle
 
 on:
   push:
     branches:
-      - main
+      - test
 
 jobs:
   build:
@@ -21,7 +21,6 @@ jobs:
 
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
-
 
       - name: Build with Gradle
         run: |
