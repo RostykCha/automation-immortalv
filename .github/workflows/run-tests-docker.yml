@@ -4,19 +4,21 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 0 * * *' # Daily schedule at midnight UTC
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository # Downloads This Repo
         uses: actions/checkout@v2
 
-      - name: Change wrapper permissions
+      - name: Change wrapper permissions # Adds this pernission to be able to run Gradle Commands
         run: chmod +x ./gradlew
 
-      - name: Run Immortal UI tests Inside Docker
+      - name: Run Immortal UI tests Inside Docker  # Runs docker-compose.yml file from current repo
         run: |
           docker-compose up
           docker wait tests_container
