@@ -15,5 +15,4 @@ jobs:
 
       - name: Run Docker commands
         run: |
-          chmod +x docker-action.sh
-          ./docker-action.sh
+          docker-compose up
